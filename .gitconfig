@@ -1,0 +1,73 @@
+[include]
+    path = ~/.gitconfig_local
+
+[alias]
+    aliases = !git config -l | grep alias | cut -c 7-
+    conf = config --global -e
+    root = rev-parse --show-toplevel
+
+    aa = add --all :/
+
+    ci = commit -v
+    cia = commit --amend -v
+    wip = commit -m "WIP"
+
+    st = status -sb
+
+    co = checkout
+    cob = checkout -b
+
+    prb = pull --rebase
+
+    unstage = reset HEAD --
+    uncommit = reset --soft HEAD~1
+    undo = reset HEAD~1 --mixed
+    retcon = rebase -i @~10
+
+    publish = push origin HEAD:refs/for/master
+    draft = push origin HEAD:refs/for/master%draft
+
+    br = branch -vv
+    bra = branch -vv --all
+
+    grep = grep -Ii
+    cgrep = grep -Ii -C 1
+
+    last = log -1 HEAD
+    fl = log -u
+    dag = log --oneline --graph --decorate --all
+    ll = log --pretty=format:%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn] --decorate --numstat
+
+    di = diff
+    dc = diff --cached
+    dis = diff --stat
+    diw = diff --color-words
+    dcs = diff --cached --stat
+    dcw = diff --cached --color-words
+    dh = diff HEAD~
+    dhs = diff HEAD~ --stat
+    dhw = diff HEAD~ --color-words
+
+    ctags = !.git/hooks/ctags
+
+    count = diff --stat "4b825dc642cb6eb9a060e54bf8d69288fbee4904" # hash of empty tree
+    credit = shortlog -sn
+    linecredit = ! "lc() { git ls-tree --name-only -z -r HEAD | xargs -0 -n1 git diff --no-index --numstat /dev/null 2>/dev/null | grep -v '^-' | cut -f 3- | cut -d ' ' -f 3- | xargs -n1 git blame --line-porcelain | grep '^author ' | cut -d ' ' -f 2- | sort | uniq -c | sort -nr; }; lc"
+    cc = rev-list HEAD --count
+    cca = rev-list --all --count
+    empty-tree-hash = hash-object -t tree /dev/null
+
+[color]
+    ui = auto
+
+[pretty]
+    line = "%C(auto)%h %<|(60,trunc)%s %C(green)%ad%C(auto)%d"
+    detail = "%C(auto)%h %s%n  %C(yellow)by %C(blue)%an %C(magenta)<%ae> [%G?] %C(green)%ad%n %C(auto)%d%n"
+
+[merge]
+    tool = vimdiff
+
+[grep]
+    lineNumber = true
+[core]
+	excludesFile = ~/.gitignore_global
