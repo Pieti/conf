@@ -15,7 +15,7 @@
     st = status -sb
 
     co = checkout
-    cob = checkout -b
+    cob = checkout -t origin/master -b
 
     prb = pull --rebase
 
