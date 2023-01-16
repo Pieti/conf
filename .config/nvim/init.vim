@@ -233,3 +233,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " Autoinstall coc extensions
 let g:coc_global_extensions = ['coc-pyright', 'coc-sh', 'coc-json', 'coc-yaml', 'coc-xml', 'coc-vimlsp']
+
+
+" gopls
+autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')

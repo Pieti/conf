@@ -1,6 +1,27 @@
 {
+    "languageserver": {
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": [
+                "go.mod",
+                ".vim/",
+                ".git/",
+                ".hg/"
+            ],
+            "filetypes": [
+                "go"
+            ],
+            "initializationOptions": {
+                "usePlaceholders": true
+            }
+        }
+    },
     "editor.formatOnSave": true,
     "python.formatting.provider": "black",
     "python.formatting.blackPath": "black",
-    "coc.preferences.formatOnSaveFiletypes": ["python", "json", "markdown"]
+    "coc.preferences.formatOnSaveFiletypes": [
+        "python",
+        "json",
+        "markdown"
+    ]
 }
