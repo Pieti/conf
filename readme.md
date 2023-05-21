@@ -1,5 +1,5 @@
 # Configs
 
-My dotfiles and configs
+Dotfiles and configs
 
-Based on Based on https://www.atlassian.com/git/tutorials/dotfiles
+[How it works](https://www.atlassian.com/git/tutorials/dotfiles)
