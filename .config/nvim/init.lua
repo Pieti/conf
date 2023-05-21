@@ -42,3 +42,10 @@ require("gruvbox").setup({
 
 vim.o.background = "dark"
 vim.cmd("colorscheme gruvbox")
+
+local format_group = vim.api.nvim_create_augroup("FormatAutogroup", { clear = true })
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+    pattern = "*",
+    group = format_group,
+    command = "FormatWrite",
+})
