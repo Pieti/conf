@@ -8,6 +8,7 @@ local lsp = require("lsp-zero").preset({
 lsp.ensure_installed({
     "pyright",
     "rust_analyzer",
+    "gopls",
 })
 
 lsp.on_attach(function(client, bufnr)
