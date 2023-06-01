@@ -24,4 +24,4 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader><C-l>", "<C-w>v<CR>")
 vim.keymap.set("n", "<leader><C-j>", "<C-w>s<CR>")
 
-vim.keymap.set("n", "<C-/>", ":nohlsearch<CR>")
+vim.keymap.set("n", "<C-_>", ":nohlsearch<CR>")

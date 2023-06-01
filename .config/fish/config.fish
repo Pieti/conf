@@ -13,3 +13,9 @@ end
 setenv FZF_DEFAULT_COMMAND 'fd --type file --follow'
 setenv FZF_CTRL_T_COMMAND 'fd --type file --follow . $dir'
 setenv FZF_DEFAULT_OPTS '--height 40%'
+
+
+# pyenv init
+if command -v pyenv 1>/dev/null 2>&1
+  pyenv init - | source
+end
