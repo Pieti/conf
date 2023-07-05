@@ -31,4 +31,5 @@ return {
         }
     },
     { "mhartington/formatter.nvim" },
+    { "github/copilot.vim" },
 }
