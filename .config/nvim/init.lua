@@ -669,8 +669,8 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         -- clangd = {},
-        -- gopls = {},
-        -- pyright = {},
+        gopls = {},
+        pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -1016,6 +1016,21 @@ require('gruvbox').setup {
 
 vim.o.background = 'dark'
 vim.cmd [[colorscheme gruvbox]]
+
+vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false,
+})
+vim.g.copilot_no_tab_map = true
+
+vim.g.tmux_navigator_no_mappings = 1
+
+local opts = { noremap = true, silent = true }
+vim.keymap.set('n', '<A-h>', '<Cmd>TmuxNavigateLeft<CR>', opts)
+vim.keymap.set('n', '<A-j>', '<Cmd>TmuxNavigateDown<CR>', opts)
+vim.keymap.set('n', '<A-k>', '<Cmd>TmuxNavigateUp<CR>', opts)
+vim.keymap.set('n', '<A-l>', '<Cmd>TmuxNavigateRight<CR>', opts)
+vim.keymap.set('n', '<A-\\>', '<Cmd>TmuxNavigatePrevious<CR>', opts)
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
