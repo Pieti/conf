@@ -4,6 +4,7 @@
 -- See the kickstart.nvim README for more information
 return {
   { 'ellisonleao/gruvbox.nvim', priority = 1000 },
+  { 'tpope/vim-vinegar' },
   { 'github/copilot.vim' },
   {
     'christoomey/vim-tmux-navigator',
