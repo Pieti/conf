@@ -115,9 +115,9 @@ vim.opt.showmode = false
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
-end)
+-- vim.schedule(function()
+--   vim.opt.clipboard = 'unnamedplus'
+-- end)
 
 -- Enable break indent
 vim.opt.breakindent = true
@@ -1031,6 +1031,12 @@ vim.keymap.set('n', '<A-j>', '<Cmd>TmuxNavigateDown<CR>', opts)
 vim.keymap.set('n', '<A-k>', '<Cmd>TmuxNavigateUp<CR>', opts)
 vim.keymap.set('n', '<A-l>', '<Cmd>TmuxNavigateRight<CR>', opts)
 vim.keymap.set('n', '<A-\\>', '<Cmd>TmuxNavigatePrevious<CR>', opts)
+
+vim.keymap.set('x', '<leader>p', [["_dP]], { desc = '[P]aste without yanking' })
+vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = '[Y]ank to system clipboard' })
+vim.keymap.set('n', '<leader>Y', [["+Y]], { desc = '[Y]ank to system clipboard (line)' })
+vim.keymap.set('n', '<leader>p', [["+p]], { desc = '[P]aste from system clipboard' })
+vim.keymap.set('n', 'Q', '<nop>', { desc = 'Disable Q' })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
