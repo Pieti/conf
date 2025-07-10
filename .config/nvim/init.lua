@@ -1038,5 +1038,7 @@ vim.keymap.set('n', '<leader>Y', [["+Y]], { desc = '[Y]ank to system clipboard (
 vim.keymap.set('n', '<leader>p', [["+p]], { desc = '[P]aste from system clipboard' })
 vim.keymap.set('n', 'Q', '<nop>', { desc = 'Disable Q' })
 
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = '[U]ndotree Toggle' })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

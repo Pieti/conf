@@ -5,6 +5,9 @@
 return {
   { 'ellisonleao/gruvbox.nvim', priority = 1000 },
   { 'tpope/vim-vinegar' },
+  { 'tpope/vim-surround' },
+  { 'tpope/vim-speeddating' },
+  { 'tpope/vim-repeat' },
   { 'github/copilot.vim' },
   {
     'christoomey/vim-tmux-navigator',
@@ -24,4 +27,5 @@ return {
       { '<c-\\>', '<cmd><C-U>TmuxNavigatePrevious<cr>' },
     },
   },
+  { 'mbbill/undotree' },
 }
