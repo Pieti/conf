@@ -34,7 +34,7 @@
     cgrep = grep -Ii -C 1
 
     last = log -1 HEAD
-    fl = log -u
+    fl = log -u --follow
     dag = log --oneline --graph --decorate --all
     ll = log --pretty=format:%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn] --decorate --numstat
 
