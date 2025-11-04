@@ -15,7 +15,7 @@
     st = status -sb
 
     co = checkout
-    cob = checkout -t origin/master -b
+    cob = "!f() { git fetch; if git rev-parse --verify origin/master >/dev/null 2>&1; then git checkout -t origin/master -b \"$1\"; else git checkout -t origin/main -b \"$1\"; fi; }; f"
 
     prb = pull --rebase
 
@@ -23,9 +23,6 @@
     uncommit = reset --soft HEAD~1
     undo = reset HEAD~1 --mixed
     retcon = rebase -i @~10
-
-    publish = push origin HEAD:refs/for/master
-    draft = push origin HEAD:refs/for/master%draft
 
     br = branch -vv
     bra = branch -vv --all
