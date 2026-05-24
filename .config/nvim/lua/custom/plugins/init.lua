@@ -5,7 +5,6 @@
 return {
   { 'ellisonleao/gruvbox.nvim', priority = 1000 },
   { 'tpope/vim-vinegar' },
-  { 'tpope/vim-surround' },
   { 'tpope/vim-speeddating' },
   { 'tpope/vim-repeat' },
   { 'github/copilot.vim', enabled = false },
