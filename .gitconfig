@@ -68,3 +68,5 @@
     lineNumber = true
 [core]
 	excludesFile = ~/.gitignore_global
+[init]
+	defaultBranch = main

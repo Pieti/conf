@@ -8,7 +8,7 @@ return {
   { 'tpope/vim-surround' },
   { 'tpope/vim-speeddating' },
   { 'tpope/vim-repeat' },
-  { 'github/copilot.vim' },
+  { 'github/copilot.vim', enabled = false },
   {
     'christoomey/vim-tmux-navigator',
     cmd = {
